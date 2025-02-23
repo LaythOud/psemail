@@ -5,6 +5,13 @@ from email.mime.multipart import MIMEMultipart
 from .config import EMAIL_SENDER, EMAIL_PASSWORD, SMTP_SERVER, SMTP_PORT
 
 def send_email(email_receiver, subject, body):
+    """
+    Sends an email.
+    
+    :param email_receiver: Recipient email address
+    :param subject: Email subject
+    :param body: Email body
+    """
     message = MIMEMultipart()
     message["From"] = EMAIL_SENDER
     message["To"] = email_receiver
